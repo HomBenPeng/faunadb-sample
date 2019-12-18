@@ -22,25 +22,16 @@ export default () => {
       <div className="container-scroll">
         <div className="container">
           <h2>Customer Data</h2>
-          <div className="table">
-            <h4>name</h4>
-            <h4 className="telephone">telephone</h4>
-          </div>
           {data.length > 0 ? (
             data.map(d => (
               <TableRow
-                key={d.data.telephone}
-                firstName={d.data.firstName}
-                lastName={d.data.lastName}
-                telephone={d.data.telephone}
+                key={d.data.title}
+                title={d.data.title}
+                completed={d.data.completed.toString()}
               />
             ))
           ) : (
-            <>
-              <TableRow loading />
-              <TableRow loading />
-              <TableRow loading />
-            </>
+            null
           )}
         </div>
       </div>

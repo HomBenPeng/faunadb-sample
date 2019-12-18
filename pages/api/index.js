@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
           // make paginatable
           q.Match(
             // query index
-            q.Index('all_warehouses') // specify source
+            q.Index('allTodos') // specify source
           )
         ),
         ref => q.Get(ref) // lookup each result by its reference
